@@ -20,5 +20,5 @@ CuisineAI/
 └── README.md          # 项目说明
 ```
 
-##技术栈
+## 技术栈
 Python 3.10+、LangChain、LangGraph、LangSmith、uv（依赖管理）
