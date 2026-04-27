@@ -2,10 +2,11 @@
 基于Langchain框架搭建的Agent的学习项目
 
 ## 学习内容
+```
+学习uv进行的python项目管理
 掌握 LangChain Agent 开发流程
-理解 LangGraph 状态管理与工作流
-实践大模型在垂直场景（美食）的应用
 学习使用 LangSmith 做追踪与调试
+```
 
 ## 项目结构
 ```
