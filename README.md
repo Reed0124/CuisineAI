@@ -4,7 +4,12 @@
 ## 学习内容
 ```
 学习uv进行的python项目管理
+
 掌握 LangChain Agent 开发流程
+1、调用大模型（DEEPSEEK，DASHSCOPE）
+2、大模型的工具调用（使用tavily作为web搜索工具）
+3、提示词工程（system_prompt）
+
 学习使用 LangSmith 做追踪与调试
 ```
 
