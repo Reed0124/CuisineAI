@@ -8,7 +8,7 @@
 学习使用 LangSmith 做追踪与调试
 
 ## 项目结构
-"""
+```
 CuisineAI/
 ├── app/agents/        # Agent 核心逻辑
 ├── resources/         # 资源文件
@@ -18,7 +18,7 @@ CuisineAI/
 ├── pyproject.toml     # 项目依赖
 ├── uv.lock            # 依赖锁定
 └── README.md          # 项目说明
-"""
+```
 
 ##技术栈
 Python 3.10+、LangChain、LangGraph、LangSmith、uv（依赖管理）
