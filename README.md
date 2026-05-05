@@ -18,14 +18,21 @@
 ## 项目结构
 ```
 CuisineAI/
-├── app/agents/        # Agent 核心逻辑
-├── resources/         # 资源文件
-├── .idea/             # 项目配置
-├── .langgraph_api/    # LangGraph API 部署相关
-├── langgraph.json     # LangGraph 配置
-├── pyproject.toml     # 项目依赖
-├── uv.lock            # 依赖锁定
-└── README.md          # 项目说明
+├── app/                    # 核心应用代码
+│   ├── agents/             # Agent 智能体核心逻辑（推荐、对话）
+│   ├── tools/              # 自定义工具
+│   ├── graph.py            # LangGraph 工作流定义
+│   └── utils.py            # 工具函数
+├── frontend/               # 前端可视化页面
+│   └── index.html
+├── resources/              # 资源文件（提示词、文档）
+├── .venv/                  # Python 虚拟环境
+├── .langgraph_api/         # LangGraph 自动生成的 API 服务
+├── langgraph.json          # LangGraph 配置
+├── pyproject.toml          # 项目依赖
+├── uv.lock                 # 依赖版本锁定
+├── .gitignore              # Git 忽略文件
+└── README.md               # 项目说明
 ```
 
 ## 技术栈
