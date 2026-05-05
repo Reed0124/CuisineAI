@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CuisineAI — Your Personal AI Chef</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍🍳</text></svg>">
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="header-left">
+      <span class="logo">👨‍🍳</span>
+      <div class="header-title-group">
+        <h1>CuisineAI</h1>
+        <span class="header-subtitle">Your Personal AI Chef</span>
+      </div>
+    </div>
+    <div class="header-right">
+      <button id="btn-new-chat" class="btn-ghost" title="New Chat">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        <span class="btn-text">New Chat</span>
+      </button>
+      <span id="thread-id-display" class="thread-badge" title="Thread ID"></span>
+    </div>
+  </header>
+
+  <!-- Chat Area -->
+  <main id="chat-container" role="log" aria-label="Chat messages">
+    <div id="chat-messages">
+      <!-- Welcome message -->
+      <div class="welcome-screen" id="welcome-screen">
+        <div class="welcome-icon">🥗</div>
+        <h2>Welcome to CuisineAI</h2>
+        <p>Send me photos of your ingredients or tell me what you have — I'll suggest the best recipes for you!</p>
+        <div class="welcome-hints">
+          <button class="hint-chip" data-hint="I have tomatoes, eggs, and green onions. What can I make?">🍅 Tomatoes + Eggs + Onions</button>
+          <button class="hint-chip" data-hint="I have chicken breast, broccoli, and garlic. Suggest some healthy recipes.">🥦 Chicken + Broccoli</button>
+          <button class="hint-chip" data-hint="What can I cook with tofu, mushrooms, and bell peppers?">🍄 Tofu + Mushrooms</button>
+          <button class="hint-chip" data-hint="I have salmon, lemon, and asparagus. What recipes do you recommend?">🐟 Salmon + Asparagus</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Image Preview Bar -->
+  <div id="image-preview-bar" class="hidden">
+    <div id="image-preview-list"></div>
+  </div>
+
+  <!-- Input Area -->
+  <footer id="input-area">
+    <div class="input-wrapper">
+      <button id="btn-attach" class="btn-icon" title="Attach images">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+      </button>
+      <input type="file" id="file-input" accept="image/*" multiple hidden>
+      <textarea
+        id="message-input"
+        rows="1"
+        placeholder="Describe your ingredients or upload a photo..."
+        autofocus
+      ></textarea>
+      <button id="btn-send" class="btn-send" title="Send message">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+      <button id="btn-stop" class="btn-stop hidden" title="Stop generating">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><rect x="4" y="4" width="16" height="16" rx="2"/></svg>
+      </button>
+    </div>
+  </footer>
+
+  <!-- Error Toast -->
+  <div id="error-toast" class="toast hidden" role="alert"></div>
+
+  <!-- Drop Zone Overlay -->
+  <div id="drop-overlay" class="drop-overlay hidden">
+    <div class="drop-message">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+      <p>Drop images here</p>
+    </div>
+  </div>
+
+  <!-- Image Lightbox -->
+  <div id="lightbox" class="lightbox hidden">
+    <button id="lightbox-close" class="lightbox-close">&times;</button>
+    <img id="lightbox-img" src="" alt="Enlarged image">
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
