@@ -39,11 +39,13 @@ Python 3.10+、LangChain、LangGraph、LangSmith、uv（依赖管理）
 ```powershell
 .venv/Scripts/activate
 langgraph dev
+```
 
 ### 2、启动前端页面
 ```powershell
 cd ./frontend
 python -m http.server 3000
+```
 
 ### 3、浏览器访问
 http://localhost:3000
